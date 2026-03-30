@@ -18,12 +18,17 @@ npm run dev
 
 ブラウザで http://localhost:3000 を開きます。
 
+## GitHub リポジトリ
+
+- <https://github.com/k-hira-shine/team-tool>（このフォルダを `main` で push 済み）
+
 ## Vercel にデプロイ
 
-1. GitHub にリポジトリを push
-2. [Vercel](https://vercel.com/) で **Import** → リポジトリを選択
-3. **Root Directory** を `web` に設定（リポジトリ直下が `web` フォルダのとき）
-4. 環境変数は **現状不要**（デプロイして URL を開けばページが見える）
+1. [Vercel の Import](https://vercel.com/new) を開く
+2. GitHub の **`k-hira-shine/team-tool`** をインポート
+3. **Root Directory** を **`web`** に変更（「Edit」から指定）
+4. **Deploy**（環境変数は不要）
+5. 完了後に表示される **`https://….vercel.app`** が公開 URL
 
 ## あとからログインを足すとき
 
