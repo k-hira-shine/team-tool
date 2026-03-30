@@ -1,34 +1,36 @@
-import { ScheduleHero } from "@/components/portal/schedule-hero";
 import { CardSection, type CardItem } from "@/components/portal/card-section";
 
-const cohortLabel = "第1期 金曜クラス";
-
-const todoItems: CardItem[] = [
-  { title: "講義1を終えた方へ", description: "次のステップの案内", href: "#" },
-  { title: "講義2を終えた方へ", description: "復習と次週の準備", href: "#" },
-];
-
-const monthlyItems: CardItem[] = [
-  { title: "自己紹介用の図解をつくってみる", description: "月次課題（例）", href: "#" },
-];
-
-const archiveItems: CardItem[] = [
-  { title: "講義アーカイブ", description: "過去の録画・資料", href: "#" },
-];
-
-const setupItems: CardItem[] = [
-  { title: "Cursor セットアップ", href: "#" },
-  { title: "図解ツールの入手（Gitea）", href: "#" },
-  { title: "AIドリルの使い方", href: "#" },
-  { title: "環境変数の設定", href: "#" },
-  { title: "トラブルシュート", href: "#" },
-];
-
-const guideItems: CardItem[] = [
-  { title: "オンライン講義の準備", href: "#" },
-  { title: "受講上の注意", href: "#" },
-  { title: "チームのガイドライン", href: "#" },
-  { title: "グループセッションについて", href: "#" },
+const dummyTools: CardItem[] = [
+  {
+    title: "ツールA（ダミー）",
+    description: "後で実際のURLと説明に差し替え。",
+    href: "#",
+    anchor: "tool-a",
+  },
+  {
+    title: "ツールB（ダミー）",
+    description: "チーム用の置き場所のイメージ。",
+    href: "#",
+    anchor: "tool-b",
+  },
+  {
+    title: "ツールC（ダミー）",
+    description: "カードは増やしたり減らしたりできる。",
+    href: "#",
+    anchor: "tool-c",
+  },
+  {
+    title: "ツールD（ダミー）",
+    description: "リンク先は # のままでもよい。",
+    href: "#",
+    anchor: "tool-d",
+  },
+  {
+    title: "ツールE（ダミー）",
+    description: "必要ならセクションを分けてもよい。",
+    href: "#",
+    anchor: "tool-e",
+  },
 ];
 
 export default function HomePage() {
@@ -38,48 +40,17 @@ export default function HomePage() {
         <span className="text-lg font-bold tracking-tight text-[#1a2f4a]">
           チームポータル
         </span>
-        <div className="flex items-center gap-3 text-sm text-gray-600">
-          <span className="hidden rounded-full bg-amber-100 px-3 py-1 text-amber-900 sm:inline">
-            テスト公開（ログインなし）
-          </span>
-          <span className="hidden rounded-full bg-gray-100 px-3 py-1 text-gray-800 sm:inline">
-            {cohortLabel}
-          </span>
-        </div>
+        <span className="hidden rounded-full bg-amber-100 px-3 py-1 text-sm text-amber-900 sm:inline">
+          テスト公開（ログインなし）
+        </span>
       </header>
 
-      <main className="flex-1 space-y-10 overflow-y-auto px-6 py-6">
-        <ScheduleHero />
+      <main className="flex-1 space-y-8 overflow-y-auto px-6 py-8">
+        <p className="max-w-2xl text-sm leading-relaxed text-gray-600">
+          チームで使うツールへの入口です。下はダミーのカードです。名前・説明・URLはすべて差し替えてください。
+        </p>
 
-        <CardSection id="todo" title="やるべきこと" items={todoItems} />
-        <CardSection id="monthly" title="月次課題" items={monthlyItems} />
-        <CardSection id="archive" title="アーカイブ" items={archiveItems} />
-        <CardSection id="setup" title="設定マニュアル" items={setupItems} />
-        <CardSection id="guide" title="受講ガイド" items={guideItems} />
-
-        <section id="faq" className="scroll-mt-24 rounded-xl border border-dashed border-gray-300 bg-white p-6 text-sm text-gray-600">
-          <div className="mb-2 flex items-center gap-2">
-            <span className="h-6 w-1 rounded-sm bg-[#2563eb]" />
-            <h3 className="text-base font-bold text-gray-900">FAQ</h3>
-          </div>
-          <p>よくある質問はここにリンクや本文を追加できます。</p>
-        </section>
-
-        <section id="contact" className="scroll-mt-24 rounded-xl border border-dashed border-gray-300 bg-white p-6 text-sm text-gray-600">
-          <div className="mb-2 flex items-center gap-2">
-            <span className="h-6 w-1 rounded-sm bg-[#2563eb]" />
-            <h3 className="text-base font-bold text-gray-900">運営へのお問い合わせ</h3>
-          </div>
-          <p>連絡先やフォームのURLをここに置けます。</p>
-        </section>
-
-        <section id="settings" className="scroll-mt-24 rounded-xl border border-dashed border-gray-300 bg-white p-6 text-sm text-gray-600">
-          <div className="mb-2 flex items-center gap-2">
-            <span className="h-6 w-1 rounded-sm bg-[#2563eb]" />
-            <h3 className="text-base font-bold text-gray-900">設定</h3>
-          </div>
-          <p>ログインやアカウント設定は、本番用に後から追加できます。</p>
-        </section>
+        <CardSection id="tools" title="ツール" items={dummyTools} />
       </main>
     </div>
   );
