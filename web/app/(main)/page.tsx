@@ -1,5 +1,7 @@
 import { CardSection, type CardItem } from "@/components/portal/card-section";
 
+export const dynamic = "force-dynamic";
+
 const dummyTools: CardItem[] = [
   {
     title: "ツールA（ダミー）",
@@ -40,14 +42,14 @@ export default function HomePage() {
         <span className="text-lg font-bold tracking-tight text-[#1a2f4a]">
           チームポータル
         </span>
-        <span className="hidden rounded-full bg-amber-100 px-3 py-1 text-sm text-amber-900 sm:inline">
-          テスト公開（ログインなし）
+        <span className="hidden rounded-full bg-emerald-100 px-3 py-1 text-sm text-emerald-900 sm:inline">
+          ツールのみレイアウト
         </span>
       </header>
 
       <main className="flex-1 space-y-8 overflow-y-auto px-6 py-8">
         <p className="max-w-2xl text-sm leading-relaxed text-gray-600">
-          チームで使うツールへの入口です。下はダミーのカードです。名前・説明・URLはすべて差し替えてください。
+          チームで使うツールへの入口です。スケジュール等はなく、下のダミーカードだけです。名前・説明・URLはすべて差し替えてください。
         </p>
 
         <CardSection id="tools" title="ツール" items={dummyTools} />
